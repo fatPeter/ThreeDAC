@@ -1,0 +1,6 @@
+
+dataset/
+checkpoints/
+ScanNet/bin/
+SemanticKITTI/bin/
+

@@ -1,0 +1,5 @@
+pip install torch==1.7
+pip install scipy
+pip install open3d
+pip install tensorflow==1.13.1
+pip install trimesh
