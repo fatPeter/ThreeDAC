@@ -34,23 +34,23 @@ pip install git+https://github.com/mit-han-lab/torchsparse.git@v1.1.0
 
 1. Download the ScanNet dataset from [the official website](http://kaldir.vc.in.tum.de/scannet_benchmark/documentation) and move it to `./dataset`.
 2. Voxelize the point cloud geometry with a 9-depth octree and deduplicate redundant points. We merge this process to the dataloader to simplify our code.
-3. Train/eval and compress/decompress scripts are in `./ScanNet`:
+- Train/eval and compress/decompress scripts are in `./ScanNet`:
 ```
 cd ScanNet
 ```
-4. Train on ScanNet (Qstep denotes the quantization step):
+- Train on ScanNet (Qstep denotes the quantization step):
 ```
 python train.py --Qstep=10
 ```
-5. Quick eval:
+- Quick eval:
 ```
 python eval.py --Qstep=10
 ```
-6. Compress scans of ScanNet:
+- Compress scans of ScanNet:
 ```
 python compress.py --Qstep=10
 ```
-7. Decompress:
+- Decompress:
 ```
 python decompress.py --Qstep=10
 ```
@@ -59,29 +59,22 @@ python decompress.py --Qstep=10
 
 1. SemanticKITTI dataset can be found <a href="http://semantic-kitti.org/dataset.html#download">here</a>. Download the files and extract everything into the same folder. Uncompress the folder and move it to `./dataset`.
 2. Voxelize the point cloud geometry with a 12-depth octree and deduplicate redundant points. We merge this process to the dataloader to simplify our code.
-3. Train/eval and compress/decompress scripts are in `./SemanticKITTI`:
+- Train/eval and compress/decompress scripts are in `./SemanticKITTI`:
 ```
 cd SemanticKITTI
 ```
-4. Train on SemanticKITTI:
+- Train on SemanticKITTI:
 ```
 python train.py --Qstep=10
 ```
-5. Compress scans of ScanNet (step: compress part of data for quick testing):
+- Compress scans of ScanNet (step: compress part of data for quick testing):
 ```
 python compress.py --Qstep=10 --step=200
 ```
-6. Decompress:
+- Decompress:
 ```
 python decompress.py --Qstep=10--step=200
 ```
-
-
-
-
-
-
-
 
 
 ### Citation
