@@ -490,16 +490,16 @@ with torch.no_grad():
         psnr_list.append(psnr)
         
     
-        break
+        # break
     print('psnr', np.mean(psnr_list))
         
         
 
   
-import pptk
-v=pptk.viewer(points)
-v.attributes(utils.YUV2RGB(colors_ori)/255, utils.YUV2RGB(outC)/255)
-v.set(point_size=1)    
+# import pptk
+# v=pptk.viewer(points)
+# v.attributes(utils.YUV2RGB(colors_ori)/255, utils.YUV2RGB(outC)/255)
+# v.set(point_size=1)    
 
         
 

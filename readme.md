@@ -3,11 +3,10 @@
 This is the official implementation of **3DAC**, a learning-based data compression framework for point cloud attributes. For technical details, please refer to:
 
 **3DAC: Learning Attribute Compression for Point Clouds**  <br />
-[Guangchi Fang](https://fatpeter.github.io/),[Hanyun Wang](https://scholar.google.com.hk/citations?user=QG3LdUcAAAAJ&hl=zh-CN/),[Yiling XU](https://scholar.google.com/citations?user=638kRwkAAAAJ&hl=en/),[Qingyong Hu](https://www.cs.ox.ac.uk/people/qingyong.hu/),[Yulan Guo](http://yulanguo.me/). <br />
+[Guangchi Fang](https://fatpeter.github.io/), [Qingyong Hu](https://www.cs.ox.ac.uk/people/qingyong.hu/), [Hanyun Wang](https://scholar.google.com.hk/citations?user=QG3LdUcAAAAJ&hl=zh-CN/), [Yiling Xu](https://scholar.google.com/citations?user=638kRwkAAAAJ&hl=en/), [Yulan Guo](http://yulanguo.me/). <br />
 **[[Paper](https://arxiv.org/abs/2203.09931)]** <br />
 
 <p align="center"> <img src="./media/3DAC.png" width="100%"> </p>
-
 
 
 
@@ -16,7 +15,7 @@ This code has been tested with Python 3.7, torch 1.7.0, CUDA 10.2.
 
 - Clone the repository 
 ```
-git clone
+git clone git@github.com:fatPeter/ThreeDAC.git && cd ThreeDAC
 ```
 - Setup python environment
 ```
@@ -63,17 +62,17 @@ python decompress.py --Qstep=10
 ```
 cd SemanticKITTI
 ```
-- Train on SemanticKITTI:
+- Train on SemanticKITTI (step: use part of data for quick testing):
 ```
-python train.py --Qstep=10
+python train.py --Qstep=10 --step=20
 ```
-- Compress scans of ScanNet (step: compress part of data for quick testing):
+- Compress scans of ScanNet:
 ```
 python compress.py --Qstep=10 --step=200
 ```
 - Decompress:
 ```
-python decompress.py --Qstep=10--step=200
+python decompress.py --Qstep=10 --step=200
 ```
 
 

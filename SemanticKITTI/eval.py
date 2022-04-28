@@ -32,6 +32,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--Qstep', type=int, default=10)
 parser.add_argument('--dir_path', type=str, default='dataset/SemanticKitti/')
 parser.add_argument('--depth', type=int, default=12)
+parser.add_argument('--step', type=int, default=20)
 opt = parser.parse_args()
 print(opt)
 
@@ -47,7 +48,7 @@ if not os.path.exists(out_model_dir):
 
 depth = opt.depth
 Qstep = opt.Qstep
-
+step = opt.step
 
 
     
@@ -66,8 +67,8 @@ test_dataloader = torch.utils.data.DataLoader(test_dataset, batch_size=1, shuffl
 
 
 
-# train_dataset.data_path_list=train_dataset.data_path_list[::20]
-# test_dataset.data_path_list=test_dataset.data_path_list[::20]
+train_dataset.data_path_list = train_dataset.data_path_list[::step]
+test_dataset.data_path_list = test_dataset.data_path_list[::step]
 
 
 

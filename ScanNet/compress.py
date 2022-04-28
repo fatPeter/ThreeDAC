@@ -70,8 +70,8 @@ test_dataloader = torch.utils.data.DataLoader(test_dataset, batch_size=1, shuffl
 
 
 
-train_dataset.data_path_list=train_dataset.data_path_list[::10]
-test_dataset.data_path_list=test_dataset.data_path_list[::10]
+# train_dataset.data_path_list=train_dataset.data_path_list[::10]
+# test_dataset.data_path_list=test_dataset.data_path_list[::10]
 
 
 
@@ -365,7 +365,7 @@ with torch.no_grad():
         # print(batch_id, train_loss.item())        
         # if batch_id==5:
         #     break
-        break
+        # break
     
     print(np.mean(bpv_list))
     print(np.mean(bpp_list))

@@ -34,19 +34,6 @@ class SemanticKittiPCC(data.Dataset):
                     os.path.join(self.dir_path, seq, 'velodyne', x) for x in seq_files
                 ]
                 self.data_path_list.extend(seq_files)                      
-            
-        if mode=='val':
-            # self.seqs = ['11', '12', '13', '14', '15', '16', '17', '18', '19', '20','21']    
-            self.seqs = ['08']    
-            self.data_path_list = []
-            for seq in self.seqs:
-                seq_files = sorted(
-                    os.listdir(os.path.join(self.dir_path, seq, 'velodyne')))
-                seq_files = [
-                    os.path.join(self.dir_path, seq, 'velodyne', x) for x in seq_files
-                ]
-                self.data_path_list.extend(seq_files)   
-                
         if mode == 'test':
             self.seqs = ['11', '12', '13', '14', '15', '16', '17', '18', '19', '20','21']    
             self.data_path_list = []
