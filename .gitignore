@@ -3,4 +3,4 @@ dataset/
 checkpoints/
 ScanNet/bin/
 SemanticKITTI/bin/
-__pycache__/
+**/__pycache__
