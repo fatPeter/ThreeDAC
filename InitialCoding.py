@@ -8,7 +8,7 @@ Created on Fri Apr 15 17:36:28 2022
 
 import numpy as np
 import torch
-from Haar3D_inform import haar3D, inv_haar3D
+from Haar3D_info import haar3D, inv_haar3D
 import utils
 
 

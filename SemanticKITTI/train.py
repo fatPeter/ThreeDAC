@@ -14,7 +14,7 @@ os.chdir("..")
 
 import numpy as np
 
-from Haar3D_inform import haar3D, inv_haar3D
+from Haar3D_info import haar3D, inv_haar3D
 import torch
 import torch.optim as optim
 
@@ -286,11 +286,10 @@ for epoch in range(0, num_epochs):
         # psnr = utils.get_PSNR(colors[:,0], C_rec[:,0])
         
         
-        psnr = 0
-        # psnr = utils.eval_rec(points.numpy(), colors.numpy(),
-        #                       torch.cat((DC_coef, CT_q), 0).numpy(), 
-        #                       Qstep, depth, inv_haar3D)        
-        # psnr_list.append(psnr)
+        psnr = utils.eval_rec(points.numpy(), colors.numpy(),
+                              torch.cat((DC_coef, CT_q), 0).numpy(), 
+                              Qstep, depth, inv_haar3D)        
+        psnr_list.append(psnr)
         
         time_back = time.time()
         

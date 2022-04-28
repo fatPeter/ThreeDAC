@@ -14,7 +14,7 @@ os.chdir("..")
 
 import numpy as np
 
-from Haar3D_inform import haar3D, inv_haar3D, copyAsort, get_RAHT_tree, itransform_batched
+from Haar3D_info import haar3D, inv_haar3D, copyAsort, get_RAHT_tree, itransform_batched
 import torch
 import torch.optim as optim
 

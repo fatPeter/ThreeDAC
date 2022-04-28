@@ -14,7 +14,7 @@ os.chdir("..")
 
 import numpy as np
 
-from Haar3D_inform import haar3D, inv_haar3D
+from Haar3D_info import haar3D, inv_haar3D
 import torch
 import torch.optim as optim
 
@@ -158,10 +158,7 @@ for epoch in range(0, num_epochs):
         colors = colors*255
         colors = utils.RGB2YUV(colors) 
         
-        if points.shape[0]>200000:
-            rand_idx = np.random.choice(points.shape[0], 200000, replace=False)
-            points = points[rand_idx]
-            colors = colors[rand_idx]   
+       
                   
             
         # initial coding
